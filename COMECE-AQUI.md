@@ -1,0 +1,95 @@
+# Comece aqui: mais FPS, sem precisar de experiência
+
+Você não precisa entender nada de PC nem de IA. Você vai usar um chat de IA gratuito como guia. Ele analisa um relatório sobre o seu PC e diz o que fazer, um passo de cada vez.
+
+**Tempo:** cerca de 30 minutos para a primeira parte.
+**Custo:** grátis.
+**Você precisa de:** um PC com Windows e um navegador.
+
+## Três regras para ficar seguro
+
+1. **Nada muda se você não mudar.** O relatório da Parte 2 só lê informações do seu PC.
+2. **Se não entendeu um passo, não faça ainda.** Pergunte à IA: *"O que isso faz, o que pode dar errado e como eu desfaço?"*
+3. **Nunca passe para a IA suas senhas, chaves de recuperação ou dados de cartão.** Ela não precisa disso. Se pedir, diga não.
+
+A IA pode errar, mesmo parecendo ter certeza. Se algo parecer arriscado, pergunte a um amigo que entenda de PC.
+
+## Parte 1: Meça seu FPS agora
+
+Faça isso primeiro. Sem um número de "antes", você não vai saber se algo funcionou.
+
+1. Abra seu jogo e ligue o contador de FPS. Se não encontrar, pesquise na internet por "[nome do jogo] mostrar FPS".
+   - **Counter-Strike 2:** procure as opções de telemetria em Configurações > Jogo e ative a exibição da taxa de quadros.
+2. Jogue por alguns minutos em um mapa que você conhece.
+3. Anote seu FPS normal e o valor mais baixo a que ele chega durante uma troca de tiros.
+
+## Parte 2: Crie o relatório sobre o seu PC
+
+1. No topo da página deste repositório no GitHub, clique no botão verde **Code** e depois em **Download ZIP**.
+2. Abra a pasta **Downloads**, clique com o botão direito no arquivo ZIP e escolha **Extrair Tudo** e depois **Extrair**.
+3. Abra a nova pasta. Você deve ver arquivos chamados `audit.ps1` e `PLAYBOOK.md`. Se aparecer só outra pasta, abra essa pasta.
+4. Clique com o botão direito em um espaço vazio da pasta e escolha **Abrir no Terminal**. Vai aparecer uma janela com texto. Isso é normal.
+   - Não apareceu? Clique em **Mostrar mais opções** e procure **Abrir janela do PowerShell aqui**.
+5. Copie a linha inteira abaixo, cole nessa janela clicando com o botão direito e aperte **Enter**:
+
+   ```powershell
+   powershell -NoProfile -ExecutionPolicy Bypass -File .\audit.ps1 -OutFile audit.txt
+   ```
+
+6. Espere o texto parar de rolar. Um novo arquivo chamado `audit.txt` vai aparecer na pasta.
+7. Dê dois cliques em `audit.txt` e passe o olho. Ele lista as peças e configurações do seu PC. Apague o que não quiser compartilhar e salve.
+
+Texto de erro em vermelho em uma ou duas seções geralmente não é problema. Continue assim mesmo e mostre para a IA se ficar preocupado.
+
+## Parte 3: Peça ajuda à IA
+
+1. Abra um chat de IA gratuito no navegador, como [Claude](https://claude.ai), [ChatGPT](https://chatgpt.com) ou [Gemini](https://gemini.google.com). Talvez seja preciso criar uma conta grátis.
+2. Anexe `PLAYBOOK.md` e `audit.txt`. Procure um botão de clipe ou **+** perto da caixa de mensagem. Se não houver, abra cada arquivo, copie todo o texto e cole no chat. O `PLAYBOOK.md` está em inglês, mas a IA entende.
+3. Copie a mensagem abaixo, preencha os colchetes e envie:
+
+   > Sou totalmente iniciante. Use o PLAYBOOK.md em anexo para descobrir por que meu jogo poderia rodar mais rápido, usando o meu audit.txt em anexo. Responda em português do Brasil.
+   >
+   > Meu jogo: [nome do jogo]
+   > Meu FPS agora: cerca de [número], caindo para cerca de [número] nas trocas de tiros
+   > Outras plataformas de jogo ou anti-cheat que eu uso: [por exemplo, FACEIT, ou "nenhuma"]
+   >
+   > Explique tudo com palavras simples e me dê só as 3 coisas mais fáceis e seguras para tentar primeiro. Me passe um passo de cada vez, diga exatamente onde clicar, diga como desfazer e espere eu confirmar que funcionou antes do próximo passo. Avise claramente se algum passo for arriscado.
+
+4. Faça um passo de cada vez. Travou? Tire uma foto da tela com o celular, envie para a IA e pergunte: *"O que eu faço agora?"*
+
+## Parte 4: Veja se funcionou
+
+Jogue no mesmo mapa e confira seu FPS de novo. Depois, passe os novos números para a IA e pergunte: *"Qual é o próximo passo, e vale o risco?"*
+
+**Pode parar quando estiver satisfeito.** Se o seu FPS já estiver acima da taxa de atualização do monitor e o jogo estiver fluido, talvez você não precise de mais nada.
+
+## Sinais de alerta
+
+**Pare e peça ajuda a alguém que entenda de PC se:**
+- A IA mandar você entrar na **BIOS**, a tela de configurações que aparece antes do Windows iniciar, e você se sentir inseguro. É ali que podem estar os ganhos maiores, mas um erro pode impedir o PC de ligar. A maioria dos problemas tem solução, mas vá com calma.
+- A IA sugerir atualizar a BIOS. Não desligue o PC durante a atualização.
+- A IA pedir para desligar a **Segurança do Windows** ou o antivírus. Diga não.
+- A IA pedir para desligar **VBS, Secure Boot ou TPM**. Veja antes as regras do seu anti-cheat, porque você pode ficar sem acesso ao jogo.
+- A IA pedir para baixar uma ferramenta de "otimização" ou "booster" que você nunca ouviu falar. Diga não até alguém de confiança verificar.
+- O PC começar a travar ou reiniciar depois de uma mudança. Desfaça a última mudança e avise a IA.
+
+**Está em um notebook?** Muitas das correções maiores não se aplicam, e o calor importa mais. Avise a IA que é um notebook.
+
+## Palavras que você vai ver
+
+| Palavra | O que significa |
+|---|---|
+| **FPS** | Quadros por segundo. Quanto maior, geralmente mais fluido |
+| **1% lows** | O quanto os piores momentos são ruins. Números baixos parecem travadas |
+| **Hz (taxa de atualização)** | Quantas vezes por segundo o monitor atualiza a imagem |
+| **CPU** | O processador. Em muitos jogos competitivos, é ele que limita o FPS |
+| **GPU** | A placa de vídeo |
+| **RAM** | Memória rápida de curto prazo. Muitas vezes roda abaixo da velocidade anunciada até você ativar o perfil dela |
+| **BIOS** | A tela de configurações que aparece antes do Windows iniciar |
+| **XMP / DOCP / EXPO** | Uma opção da BIOS que faz a RAM rodar na velocidade anunciada |
+| **Overclock** | Fazer peças rodarem acima da velocidade especificada, o que pode deixar o PC instável |
+| **Driver** | Programa que faz o Windows se comunicar com uma peça, como a placa de vídeo |
+
+## Quer a versão técnica?
+
+Veja o [README.md](README.md) para os resultados de exemplo e o [PLAYBOOK.md](PLAYBOOK.md) para as instruções completas da IA. Os dois estão em inglês.

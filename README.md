@@ -6,6 +6,8 @@ This repo holds a set of instructions your AI can follow, and a read-only script
 
 **New to this? Go to [START-HERE.md](START-HERE.md).** It assumes no PC or AI experience.
 
+**Iniciante? Veja o guia em português: [COMECE-AQUI.md](COMECE-AQUI.md).**
+
 ## How to use it
 
 ### With an AI that can run commands on your PC
@@ -47,6 +49,7 @@ From one PC: Ryzen 9 5900X, RTX 3090, 32 GB DDR4, 280 Hz monitor, playing CS2 at
 | File | Purpose |
 |---|---|
 | `START-HERE.md` | Plain-English guide for complete beginners |
+| `COMECE-AQUI.md` | The same beginner guide in Brazilian Portuguese |
 | `PLAYBOOK.md` | Step-by-step instructions for the AI, including safety rules and mistakes to avoid |
 | `audit.ps1` | Read-only PC snapshot. Needs no admin rights, changes nothing, and sends nothing anywhere |
 

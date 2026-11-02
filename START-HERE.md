@@ -1,5 +1,7 @@
 # Start here: more FPS, no experience needed
 
+*Em português: [COMECE-AQUI.md](COMECE-AQUI.md)*
+
 You don't need to know anything about PCs or AI. You'll use a free AI chat as your guide. It looks at a report about your PC and tells you what to do, one step at a time.
 
 **Time:** about 30 minutes for the first part.
