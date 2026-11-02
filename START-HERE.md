@@ -110,6 +110,16 @@ These are the settings from the example PC in the [README](README.md). They're b
 
 The pro column comes from a 2025 survey of 40 pros. Your eyes matter more than any table, so if you can't spot players easily, change it back. Keep **Dynamic Shadows on All**, because shadows can give away enemies.
 
+## Before you chase more FPS
+
+What we learned on our example PC, so you can save some time:
+
+- **Don't assume an app is off.** Two apps its owner thought weren't running turned out to be running in the background. Ask the AI to check.
+- **Extreme tweaks may do nothing.** Tighter RAM timings took hours of testing and gave no measurable FPS gain. One tighter setting wouldn't even let the PC start.
+- **CPU overclocking usually isn't worth it for games.** In the best test we found, it added about 2% FPS or less, with a lot more heat under full load.
+- **Small differences don't count.** Run the benchmark a few times. Our runs varied by about 8 FPS on their own, so don't trust a change smaller than your normal variation.
+- **If you ever need a RAM test,** download the current MemTest86 USB image, not the old "V4" one. If your PC goes back to the BIOS instead of starting the test, you may have the wrong version, so show the AI what's on your USB stick first.
+
 ## Stop signs
 
 **Stop and get help from someone who knows PCs if:**

@@ -108,6 +108,16 @@ Estas são as configurações do PC de exemplo do [README](README.md). Elas se b
 
 A coluna dos profissionais vem de uma pesquisa de 2025 com 40 jogadores. O que você enxerga vale mais do que qualquer tabela, então, se ficar difícil ver os jogadores, volte a opção. Deixe **Sombras dinâmicas em Todas**, porque as sombras podem entregar os inimigos.
 
+## Antes de correr atrás de mais FPS
+
+O que aprendemos no nosso PC de exemplo, para você economizar tempo:
+
+- **Não presuma que um programa está fechado.** Dois programas que o dono achava que não estavam rodando estavam ativos em segundo plano. Peça para a IA verificar.
+- **Ajustes extremos podem não mudar nada.** Apertar os tempos da RAM levou horas de teste e não trouxe ganho mensurável de FPS. Um dos ajustes mais apertados nem deixou o PC ligar.
+- **Overclock de CPU geralmente não compensa para jogos.** No melhor teste que encontramos, ele rendeu cerca de 2% de FPS ou menos, com bem mais calor em carga máxima.
+- **Diferenças pequenas não contam.** Rode o benchmark algumas vezes. Nossas rodadas variaram cerca de 8 FPS sozinhas, então não confie em uma mudança menor que a sua variação normal.
+- **Se um dia precisar testar a RAM,** baixe a imagem USB atual do MemTest86, não a antiga "V4". Se o PC voltar para a BIOS em vez de iniciar o teste, talvez seja a versão errada, então mostre para a IA o que há no seu pendrive primeiro.
+
 ## Sinais de alerta
 
 **Pare e peça ajuda a alguém que entenda de PC se:**

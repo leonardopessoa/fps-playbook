@@ -70,6 +70,8 @@ Things worth checking, roughly in order:
 
 Usually not worth chasing: network and scheduler registry tweaks, Windows "visual effects" tweaks, and overclocking a GPU that isn't the limit.
 
+**Check what's really running.** People often don't know what's on their PC. In the source session, the owner said two apps weren't on, but one had running background services and the other had a background task. A Store app can also start at sign-in even with its Startup toggle off. Its background permission is a separate setting, and uninstalling is the only sure fix. Check processes and services, then tell the person what you found.
+
 Wi-Fi doesn't reduce FPS, but wired Ethernet usually gives steadier latency.
 
 ## Step 5: BIOS update (the person does this)
@@ -107,6 +109,31 @@ This is an example, not a recipe. Other kits, boards and platforms need differen
 
 If it won't boot or isn't stable, try one at a time: raise DRAM voltage slightly, set Command Rate to 2T, then raise SOC voltage slightly. Conservative limits for this DDR4 AM4 example were 1.40 V DRAM and 1.15 V SOC. These come from community reports and caution, not an AMD specification. If it still fails, return to the rated profile. That is a good result.
 
+**Know the exact kit first.** Read it from the sticks' SPD chip, for example in CPU-Z's SPD tab: chip maker, rank count, and the rated timings and voltage. SPD usually doesn't report the exact die, so don't guess it from a part number. Leave tRFC and other subtimings on Auto unless you know the die.
+
+**Work out how far a target goes beyond the rating.** Convert timings to time: `nanoseconds = clocks x 2000 / DDR speed`. For the source kit, rated 16-18-18-36 at 3200:
+
+| Timing | Rated at 3200 | 18-20-20-40 at 3600 | 16-20-20-40 at 3600 |
+|---|---|---|---|
+| CAS | 10.0 ns | 10.0 ns | 8.9 ns, about 11% tighter |
+| tRCD | 11.25 ns | 11.1 ns | 11.1 ns |
+
+Targets near the rated time are a sensible starting point. Targets well below it are much less likely to work.
+
+**Tighten in steps, and test each one for benefit as well as stability.** Results on the source kit:
+
+| Timings at DDR4-3600 | Voltage | Result |
+|---|---|---|
+| 18-22-22-42, tRC auto (84) | 1.35 V | Booted. CS2: about 485 average, 175 1% low (3 runs) |
+| 18-20-20-40, tRC 72 | 1.35 V | Passed 2 MemTest86 passes |
+| 18-20-20-40, tRC 64 | 1.35 V | Passed 2 MemTest86 passes. CS2: 485.8 average, 175.9 1% low (1 run) |
+| 16-20-20-40, tRC 64 | 1.35 V | Would not boot |
+| 16-20-20-40, tRC 64 | 1.40 V | Would not boot |
+
+**The tighter timings gave no measurable FPS gain in CS2.** Find the normal spread between the person's runs first, and don't call anything inside it a gain. That spread was about 8 FPS on average and 5 on the 1% low here. If a tighter step doesn't beat it, stop tuning, because you'd be adding risk for nothing. One run isn't conclusive, and other games may respond differently.
+
+**After failed boots, recheck everything.** A failed boot or a CMOS clear can reset settings, so confirm memory speed, SVM, IOMMU, Secure Boot and TPM again.
+
 **Pitfalls seen in practice:**
 - **Selecting the XMP/DOCP profile can reset Memory Frequency to the rated speed.** In the source session, this nearly saved DDR4-3200 with FCLK 1800, out of sync. Set frequency after choosing the profile.
 - **Read the BIOS save dialog before confirming.** It lists every pending change. Ask for a photo of it if you can see images.
@@ -118,7 +145,26 @@ If it won't boot or isn't stable, try one at a time: raise DRAM voltage slightly
 2. Run a memory test such as MemTest86 for four passes. Any error means it's not stable. **Booting and a good benchmark do not prove stability, and unstable RAM can silently corrupt files.** Avoid important file work until this passes.
 3. Check Windows for new WHEA errors.
 
-Only try CPU tuning, such as PBO and Curve Optimizer on AMD, after the RAM passes and the PC has run without crashes for a while.
+**If MemTest86 returns to the BIOS instead of starting:** check the stick before changing BIOS settings. In the source session, the download was MemTest86 V4, the old build for legacy BIOS. The board listed the stick as "UEFI" but returned to setup. Use the current USB image from the official site and write it with its `imageUSB` tool. A correct stick has `EFI\BOOT\BOOTX64.efi`, and the current version started with Secure Boot on. If Windows offers to format part of the stick, cancel.
+
+Only consider CPU tuning, such as PBO and Curve Optimizer on AMD, after the RAM passes and the PC has run without crashes for a while.
+
+## Step 6b: Be honest about CPU overclocking
+
+For gaming, this often has poor returns. The best controlled test found was [SkatterBencher's 5900X comparison](https://skatterbencher.com/2021/08/18/skatterbencher-26-amd-ryzen-9-5900x-overclocked-to-5223-mhz/), from 2021 with water cooling. Compared with stock:
+
+| Method | CS:GO FPS | Single-core score | Prime95 power, about 120-128 W stock |
+|---|---|---|---|
+| PBO on | +0.5% | +0.2% to +0.9% | 189-203 W |
+| Manual all-core | +1.9% | -2% to -6% | 188-213 W |
+| PBO + Curve Optimizer, higher limits | +0.7% | +3% to +7% | 201-207 W |
+
+Every overclocked result also used much faster DDR4-4400 RAM, so the CPU's own share may be smaller. It's an older game and doesn't report 1% lows, so treat it as a guide, not a CS2 result.
+
+Advice for a person asking about this:
+- **Skip** manual all-core overclocks, which can lower single-core speed, and higher power limits, which add a lot of heat for little FPS.
+- **The only option worth trying** is a mild negative Curve Optimizer offset at stock power limits, starting around -10. Expect a small gain at best, and test for random crashes, including at idle.
+- **If 1% lows are the goal on AM4,** a 5700X3D or 5800X3D is the likely real upgrade. Forum reports favor them in CS2, but we found no direct CS2 benchmark against a 5900X. Say so, and let the person decide whether it's worth the money.
 
 ## Step 7: Game settings
 
@@ -171,3 +217,15 @@ Guides disagree on some of these, especially MSAA and shadows, so check current 
 ## Step 9: Test again and report
 
 Repeat Step 1 under the same conditions. Report the before and after numbers, every change made, what is still unverified, and how to undo each change. Don't credit one change with a gain unless it was tested alone.
+
+Know when to stop. Once FPS is well above the monitor's refresh rate and a tuning step shows no measurable gain, say so and recommend stopping. Real matches matter more than a few benchmark frames.
+
+## Notes for the AI
+
+Mistakes from the source session, so you can avoid them:
+
+- **Look things up instead of guessing.** Menu names in other languages can be read from the game's own files. Don't write them from memory.
+- **Don't guess at a boot or hardware fault.** Inspect the evidence first. The AI blamed Secure Boot for the MemTest86 failure, and reading the stick showed the wrong version.
+- **Check surprising page claims.** A page summary said a Workshop map had been removed. The raw HTML showed that was hidden template text.
+- **Don't try to get around blocks.** If a site blocks your download or a permission check stops an action, explain it and let the person decide. They can download the file in their own browser.
+- **Respect attribution choices.** Ask how the person wants their commits credited before publishing, and check their email isn't exposed.

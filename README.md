@@ -36,6 +36,7 @@ From one PC: Ryzen 9 5900X, RTX 3090, 32 GB DDR4, 280 Hz monitor, playing CS2 at
 |---|---|---|
 | Owner's earlier best, from their own tuning | about 380 | not recorded |
 | After this process (three benchmark runs) | 490 / 484 / 482 | 174 / 173 / 178 |
+| After also tightening RAM timings (one run) | 485.8 | 175.9 |
 
 The exact CS2 video settings used are in [START-HERE.md](START-HERE.md), [COMECE-AQUI.md](COMECE-AQUI.md) and [PLAYBOOK.md](PLAYBOOK.md), next to what pros commonly use.
 
@@ -43,7 +44,8 @@ The exact CS2 video settings used are in [START-HERE.md](START-HERE.md), [COMECE
 - The 380 is the owner's recollection, not a controlled before-and-after run, and it may have been limited by a 400 FPS cap.
 - The changes were made together, so we can't say which one helped most: BIOS update, RAM from 3200 to 3600, lower CS2 settings, and fewer background apps.
 - The benchmark is the [CS2 FPS BENCHMARK DUST2 Workshop map](https://steamcommunity.com/workshop/filedetails/?id=3240880604), not a real match. It's the recommended way to compare your own CS2 results over time. Its author says results don't carry over to real matches, because the client also simulates the whole game.
-- The RAM overclock booted and passed this benchmark, but **a full memory test had not been confirmed at the time of writing**.
+- Tighter RAM timings made no measurable difference, and CAS 16 wouldn't boot on this kit. The details are in `PLAYBOOK.md`.
+- The final RAM settings passed 2 MemTest86 passes, but **a full four-pass test had not been confirmed at the time of writing**.
 - This is one PC. Yours may gain more, less or nothing. If your RAM is already tuned and your settings are already low, there may be little left to gain.
 
 ## What's in here
@@ -72,6 +74,8 @@ The script tries to hide your Windows account name, PC name and Steam ID. Board 
 - [Dust2.us: Video settings of 40 pros, Feb 2025](https://www.dust2.us/news/57753/donk-and-other-39-pros-reveal-their-video-settings)
 - [ProSettings: CS2 settings guide](https://prosettings.net/guides/cs2-options/)
 - [XDA: Testing frame-rate capping methods](https://www.xda-developers.com/everyone-has-a-different-formula-for-capping-frame-rate-so-i-tried-all-of-them/)
+- [SkatterBencher: Ryzen 9 5900X overclocking strategies](https://skatterbencher.com/2021/08/18/skatterbencher-26-amd-ryzen-9-5900x-overclocked-to-5223-mhz/)
+- [MemTest86: official download](https://www.memtest86.com/download.htm)
 
 ## License
 
