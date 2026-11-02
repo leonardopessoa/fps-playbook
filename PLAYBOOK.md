@@ -27,7 +27,7 @@ This is the most commonly skipped step. It was skipped in the session behind thi
 
 1. Have the person close background apps, including you if you can't run in the background, and any overlays.
 2. Remove the game's FPS cap for the test. In CS2, use `fps_max 0` in the console.
-3. Use a repeatable benchmark. For CS2, a Workshop FPS benchmark map works.
+3. Use a repeatable benchmark. For CS2, use the [CS2 FPS Benchmark Workshop map](https://steamcommunity.com/workshop/filedetails/?id=3240880604). The person subscribes, enables the developer console, loads the map from Workshop Maps, and waits. Results print to the console when it ends, as a line like `[VProf] FPS: Avg=490.0, P1=174.1`, where Avg is average FPS and P1 is the 1% low. Ask for a photo of that output if you can see images. For other games, use a built-in benchmark or a repeatable route with a frame-time capture tool.
 4. Run it three times, ignore the first, and record average FPS and 1% lows.
 5. Record the PC state next to the numbers, so later runs compare like with like.
 

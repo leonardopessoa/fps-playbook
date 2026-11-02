@@ -20,9 +20,28 @@ AI can be wrong, even when it sounds sure. If something seems risky, ask a frien
 
 Do this first. Without a "before" number, you won't know if anything worked.
 
-1. Open your game, and turn on its FPS counter. If you can't find it, search the web for "[your game] show FPS".
-   - **Counter-Strike 2:** look in Settings > Game for the telemetry options, then turn on the frame rate display.
-2. Play for a few minutes on a map you know.
+### Playing Counter-Strike 2? Use the benchmark map
+
+This widely used CS2 map plays the same scene every time, so your before and after numbers are fair.
+
+1. Open the [CS2 FPS Benchmark page](https://steamcommunity.com/workshop/filedetails/?id=3240880604) and click **Subscribe**. You may need to sign in to Steam.
+2. Start CS2. Go to **Settings > Game** and set **Enable Developer Console** to **Yes**.
+3. Open the console with the key to the left of **1**, type `fps_max 0`, and press **Enter**. This removes the FPS limit for the test. Press the same key to close the console.
+4. Go to **Play > Workshop Maps** and start the benchmark. If you don't see it, restart CS2 and give the map a minute to download. The menu may be slightly different on your version.
+5. Don't touch anything until it finishes. It took about 2 minutes on our test PC.
+6. Your results appear in the console, in purple. Look for a line like this:
+
+   `[VProf] FPS: Avg=490.0, P1=174.1`
+
+   **Avg** is your average FPS, and **P1** is your 1% low, which shows how bad the worst moments are. If the console doesn't open, press the key to the left of **1**, and scroll up if needed.
+7. Run it **3 times**, and take a phone photo of each result. Ignore the first run, which can be affected by loading, and write down the numbers from the other two.
+
+When the AI asks for your FPS, give it these numbers.
+
+### Playing another game?
+
+1. Open your game and turn on its FPS counter. If you can't find it, search the web for "[your game] show FPS". If the game has a built-in benchmark, use that.
+2. Play for a few minutes on a map or level you know.
 3. Write down your usual FPS, and the lowest it drops to in a fight.
 
 ## Part 2: Create the report about your PC
@@ -61,7 +80,7 @@ Red error text in a section or two is usually fine. Continue anyway, and show it
 
 ## Part 4: See if it worked
 
-Play the same map and check your FPS again, then tell the AI your new numbers. Ask: *"What's next, and is it worth the risk?"*
+Run the same test as Part 1, the same way, and tell the AI your new numbers. Ask: *"What's next, and is it worth the risk?"*
 
 **It's fine to stop whenever you're happy.** If your FPS is already above your monitor's refresh rate and the game feels smooth, you may not need anything else.
 

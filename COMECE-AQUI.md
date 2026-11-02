@@ -18,9 +18,28 @@ A IA pode errar, mesmo parecendo ter certeza. Se algo parecer arriscado, pergunt
 
 Faça isso primeiro. Sem um número de "antes", você não vai saber se algo funcionou.
 
-1. Abra seu jogo e ligue o contador de FPS. Se não encontrar, pesquise na internet por "[nome do jogo] mostrar FPS".
-   - **Counter-Strike 2:** procure as opções de telemetria em Configurações > Jogo e ative a exibição da taxa de quadros.
-2. Jogue por alguns minutos em um mapa que você conhece.
+### Joga Counter-Strike 2? Use o mapa de benchmark
+
+Esse mapa de CS2 é muito usado e roda sempre a mesma cena, então os números de antes e depois podem ser comparados de forma justa.
+
+1. Abra a [página do CS2 FPS Benchmark](https://steamcommunity.com/workshop/filedetails/?id=3240880604) e clique em **Inscrever-se**. Talvez seja preciso entrar na sua conta Steam.
+2. Abra o CS2. Vá em **Configurações > Jogo** e deixe **Ativar console do desenvolvedor** em **Sim**.
+3. Abra o console com a tecla à esquerda do **1**, digite `fps_max 0` e aperte **Enter**. Isso tira o limite de FPS durante o teste. Aperte a mesma tecla para fechar o console.
+4. Vá em **Jogar > Mapas da Oficina** e inicie o benchmark. Se ele não aparecer, reinicie o CS2 e espere um minuto para o mapa baixar. O menu pode ser um pouco diferente na sua versão.
+5. Não mexa em nada até terminar. Levou cerca de 2 minutos no nosso PC de teste.
+6. Os resultados aparecem no console, em roxo. Procure uma linha assim:
+
+   `[VProf] FPS: Avg=490.0, P1=174.1`
+
+   **Avg** é o seu FPS médio, e **P1** é o seu 1% low, que mostra o quanto os piores momentos são ruins. Se o console não abrir, aperte a tecla à esquerda do **1** e role para cima se precisar.
+7. Rode **3 vezes** e tire uma foto de cada resultado com o celular. Ignore a primeira rodada, que pode ser afetada pelo carregamento, e anote os números das outras duas.
+
+Quando a IA perguntar seu FPS, passe esses números.
+
+### Joga outro jogo?
+
+1. Abra seu jogo e ligue o contador de FPS. Se não encontrar, pesquise na internet por "[nome do jogo] mostrar FPS". Se o jogo tiver um benchmark próprio, use esse.
+2. Jogue por alguns minutos em um mapa ou fase que você conhece.
 3. Anote seu FPS normal e o valor mais baixo a que ele chega durante uma troca de tiros.
 
 ## Parte 2: Crie o relatório sobre o seu PC
@@ -59,7 +78,7 @@ Texto de erro em vermelho em uma ou duas seções geralmente não é problema. C
 
 ## Parte 4: Veja se funcionou
 
-Jogue no mesmo mapa e confira seu FPS de novo. Depois, passe os novos números para a IA e pergunte: *"Qual é o próximo passo, e vale o risco?"*
+Faça o mesmo teste da Parte 1, do mesmo jeito. Depois, passe os novos números para a IA e pergunte: *"Qual é o próximo passo, e vale o risco?"*
 
 **Pode parar quando estiver satisfeito.** Se o seu FPS já estiver acima da taxa de atualização do monitor e o jogo estiver fluido, talvez você não precise de mais nada.
 
