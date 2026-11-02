@@ -1,0 +1,95 @@
+# Start here: more FPS, no experience needed
+
+You don't need to know anything about PCs or AI. You'll use a free AI chat as your guide. It looks at a report about your PC and tells you what to do, one step at a time.
+
+**Time:** about 30 minutes for the first part.
+**Cost:** free.
+**You need:** a Windows PC and a web browser.
+
+## Three rules that keep you safe
+
+1. **Nothing changes unless you change it.** The report in Part 2 only reads information from your PC.
+2. **If you don't understand a step, don't do it yet.** Ask the AI: *"What does this do, what could go wrong, and how do I undo it?"*
+3. **Never give the AI your passwords, recovery keys or card details.** It doesn't need them. If it asks, say no.
+
+AI can be wrong, even when it sounds sure. If something seems risky, ask a friend who knows PCs.
+
+## Part 1: Measure your FPS now
+
+Do this first. Without a "before" number, you won't know if anything worked.
+
+1. Open your game, and turn on its FPS counter. If you can't find it, search the web for "[your game] show FPS".
+   - **Counter-Strike 2:** look in Settings > Game for the telemetry options, then turn on the frame rate display.
+2. Play for a few minutes on a map you know.
+3. Write down your usual FPS, and the lowest it drops to in a fight.
+
+## Part 2: Create the report about your PC
+
+1. At the top of this repo's page on GitHub, click the green **Code** button, then **Download ZIP**.
+2. Open your **Downloads** folder, right-click the ZIP, and choose **Extract All**, then **Extract**.
+3. Open the new folder. You should see files named `audit.ps1` and `PLAYBOOK.md`. If you only see another folder, open that one.
+4. Right-click an empty spot in the folder, and choose **Open in Terminal**. A window with text appears. That's normal.
+   - Don't see it? Click **Show more options** and look for **Open PowerShell window here**.
+5. Copy this whole line, paste it into that window with a right-click, and press **Enter**:
+
+   ```powershell
+   powershell -NoProfile -ExecutionPolicy Bypass -File .\audit.ps1 -OutFile audit.txt
+   ```
+
+6. Wait for the text to stop scrolling. A new file named `audit.txt` appears in the folder.
+7. Double-click `audit.txt` and skim it. It lists your PC's parts and settings. Delete anything you don't want to share, then save.
+
+Red error text in a section or two is usually fine. Continue anyway, and show it to the AI if you're worried.
+
+## Part 3: Ask the AI
+
+1. Open a free AI chat in your browser, such as [Claude](https://claude.ai), [ChatGPT](https://chatgpt.com) or [Gemini](https://gemini.google.com). You may need to make a free account.
+2. Attach `PLAYBOOK.md` and `audit.txt`. Look for a paperclip or **+** button near the message box. If there isn't one, open each file, copy all its text, and paste it in.
+3. Copy the message below, fill in the brackets, and send it:
+
+   > I'm a complete beginner. Use the attached PLAYBOOK.md to find why my game could run faster, using my attached audit.txt.
+   >
+   > My game: [game name]
+   > My FPS now: about [number], dropping to about [number] in fights
+   > Other game platforms or anti-cheat I use: [for example FACEIT, or "none"]
+   >
+   > Please explain things in simple words and give me only the 3 easiest and safest things to try first. Give me one step at a time, tell me exactly where to click, tell me how to undo it, and wait for me to say it worked before the next step. Tell me clearly if any step is risky.
+
+4. Do one step at a time. Stuck? Take a phone photo of your screen, send it to the AI, and ask: *"What do I do now?"*
+
+## Part 4: See if it worked
+
+Play the same map and check your FPS again, then tell the AI your new numbers. Ask: *"What's next, and is it worth the risk?"*
+
+**It's fine to stop whenever you're happy.** If your FPS is already above your monitor's refresh rate and the game feels smooth, you may not need anything else.
+
+## Stop signs
+
+**Stop and get help from someone who knows PCs if:**
+- The AI sends you into the **BIOS**, the settings screen that appears before Windows starts, and you feel unsure. This is where the bigger gains can be, but mistakes can stop your PC from starting. Most problems can be reversed, but take your time.
+- The AI suggests updating the BIOS. Don't turn off your PC during an update.
+- The AI asks you to turn off **Windows Security** or antivirus. Say no.
+- The AI asks you to turn off **VBS, Secure Boot or TPM**. Check your anti-cheat rules first, because you could get locked out of your game.
+- The AI asks you to download a "tweak" or "booster" tool you've never heard of. Say no until someone you trust has checked it.
+- Your PC starts crashing after a change. Undo the last change, and tell the AI.
+
+**On a laptop?** Many of the bigger fixes won't apply, and heat matters more. Tell the AI it's a laptop.
+
+## The words you'll see
+
+| Word | What it means |
+|---|---|
+| **FPS** | Frames per second. Higher usually feels smoother |
+| **1% lows** | How bad the worst moments are. Low numbers feel like stutter |
+| **Hz (refresh rate)** | How many times per second your monitor updates |
+| **CPU** | The main processor. In many competitive games, this limits FPS |
+| **GPU** | The graphics card |
+| **RAM** | Fast short-term memory. It often runs slower than it's rated for until you turn on its profile |
+| **BIOS** | The settings screen that appears before Windows starts |
+| **XMP / DOCP / EXPO** | A BIOS setting that runs RAM at its advertised speed |
+| **Overclocking** | Running parts faster than their rated speed, which can make your PC unstable |
+| **Driver** | Software that lets Windows talk to a part, like your graphics card |
+
+## Want the technical version?
+
+See [README.md](README.md) for the example results and [PLAYBOOK.md](PLAYBOOK.md) for the AI's full instructions.
