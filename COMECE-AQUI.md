@@ -20,12 +20,12 @@ Faça isso primeiro. Sem um número de "antes", você não vai saber se algo fun
 
 ### Joga Counter-Strike 2? Use o mapa de benchmark
 
-Esse mapa de CS2 é muito usado e roda sempre a mesma cena, então os números de antes e depois podem ser comparados de forma justa.
+Esse mapa de CS2 é muito usado e roda sempre a mesma cena, então os números de antes e depois podem ser comparados de forma justa. Use para comparar o seu próprio PC: segundo o autor do mapa, os resultados não valem para partidas reais, porque o seu PC também simula o jogo inteiro.
 
-1. Abra a [página do CS2 FPS Benchmark](https://steamcommunity.com/workshop/filedetails/?id=3240880604) e clique em **Inscrever-se**. Talvez seja preciso entrar na sua conta Steam.
-2. Abra o CS2. Vá em **Configurações > Jogo** e deixe **Ativar console do desenvolvedor** em **Sim**.
+1. Abra a [página do CS2 FPS BENCHMARK DUST2](https://steamcommunity.com/workshop/filedetails/?id=3240880604) e clique em **Inscrever-se**. Talvez seja preciso entrar na sua conta Steam.
+2. Abra o CS2. Vá em **CONFIGURAÇÕES > Jogo** e ligue a opção **Ativar console de desenvolvedor**.
 3. Abra o console com a tecla à esquerda do **1**, digite `fps_max 0` e aperte **Enter**. Isso tira o limite de FPS durante o teste. Aperte a mesma tecla para fechar o console.
-4. Vá em **Jogar > Mapas da Oficina** e inicie o benchmark. Se ele não aparecer, reinicie o CS2 e espere um minuto para o mapa baixar. O menu pode ser um pouco diferente na sua versão.
+4. Vá em **JOGAR > Mapas da Oficina** e inicie o benchmark. Se ele não aparecer, reinicie o CS2 e espere um minuto para o mapa baixar.
 5. Não mexa em nada até terminar. Levou cerca de 2 minutos no nosso PC de teste.
 6. Os resultados aparecem no console, em roxo. Procure uma linha assim:
 

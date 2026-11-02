@@ -40,7 +40,7 @@ From one PC: Ryzen 9 5900X, RTX 3090, 32 GB DDR4, 280 Hz monitor, playing CS2 at
 **Please read this before quoting those numbers:**
 - The 380 is the owner's recollection, not a controlled before-and-after run, and it may have been limited by a 400 FPS cap.
 - The changes were made together, so we can't say which one helped most: BIOS update, RAM from 3200 to 3600, lower CS2 settings, and fewer background apps.
-- The benchmark is the [CS2 FPS Benchmark Workshop map](https://steamcommunity.com/workshop/filedetails/?id=3240880604), not a real match. It's the recommended way to compare CS2 results, but real matches can run differently.
+- The benchmark is the [CS2 FPS BENCHMARK DUST2 Workshop map](https://steamcommunity.com/workshop/filedetails/?id=3240880604), not a real match. It's the recommended way to compare your own CS2 results over time. Its author says results don't carry over to real matches, because the client also simulates the whole game.
 - The RAM overclock booted and passed this benchmark, but **a full memory test had not been confirmed at the time of writing**.
 - This is one PC. Yours may gain more, less or nothing. If your RAM is already tuned and your settings are already low, there may be little left to gain.
 
@@ -64,7 +64,7 @@ The script tries to hide your Windows account name, PC name and Steam ID. Board 
 
 ## Sources
 
-- [CS2 FPS Benchmark Workshop map](https://steamcommunity.com/workshop/filedetails/?id=3240880604)
+- [CS2 FPS BENCHMARK DUST2 Workshop map](https://steamcommunity.com/workshop/filedetails/?id=3240880604)
 - [FACEIT: Windows security requirements](https://support.faceit.com/hc/en-us/articles/23117181142556)
 - [NVIDIA: System latency optimization guide](https://www.nvidia.com/en-us/geforce/guides/system-latency-optimization-guide)
 - [Dust2.us: Video settings of 40 pros, Feb 2025](https://www.dust2.us/news/57753/donk-and-other-39-pros-reveal-their-video-settings)
