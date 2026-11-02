@@ -139,6 +139,26 @@ A survey of 40 pros, published in February 2025, found these most common:
 | HDR | Quality |
 | Boost Player Contrast | On (about 70%) |
 
+The example PC in the README used a similar config, at 1440x1080 (4:3):
+
+| Setting | Example PC | Compared with pros |
+|---|---|---|
+| Display Mode | Fullscreen | Not in the survey |
+| Boost Player Contrast | On | Same |
+| Global Shadow Quality | High | Same |
+| Dynamic Shadows | All | Same |
+| Ambient Occlusion | Disabled | Same |
+| Particle Detail | Low | Same |
+| Shader Detail | Low | Same |
+| High Dynamic Range | Quality | Same |
+| Model / Texture Detail | High | Higher than Low |
+| Multisampling Anti-Aliasing Mode | 4x MSAA | Lower than 8x |
+| Texture Filtering Mode | Anisotropic 4X | Higher than Bilinear |
+| FidelityFX Super Resolution | Disabled | Not in the survey |
+| NVIDIA Reflex Low Latency | Enabled | Not in the survey |
+
+Use this as a starting point, not a target. This PC has a strong GPU, which is why higher MSAA and texture settings were reasonable. On a weaker GPU, test lowering those first. Have the person photograph their old settings before changing anything. The game saves its settings in `cs2_video.txt` as numbers, so confirm what a number means in the menu before reporting it.
+
 Guides disagree on some of these, especially MSAA and shadows, so check current pro data and let the person judge visibility themselves. Shadows and player contrast can affect what they see, so don't sacrifice them for FPS without saying so.
 
 ## Step 8: Frame caps, reported honestly

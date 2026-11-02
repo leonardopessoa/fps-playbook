@@ -37,6 +37,8 @@ From one PC: Ryzen 9 5900X, RTX 3090, 32 GB DDR4, 280 Hz monitor, playing CS2 at
 | Owner's earlier best, from their own tuning | about 380 | not recorded |
 | After this process (three benchmark runs) | 490 / 484 / 482 | 174 / 173 / 178 |
 
+The exact CS2 video settings used are in [START-HERE.md](START-HERE.md), [COMECE-AQUI.md](COMECE-AQUI.md) and [PLAYBOOK.md](PLAYBOOK.md), next to what pros commonly use.
+
 **Please read this before quoting those numbers:**
 - The 380 is the owner's recollection, not a controlled before-and-after run, and it may have been limited by a 400 FPS cap.
 - The changes were made together, so we can't say which one helped most: BIOS update, RAM from 3200 to 3600, lower CS2 settings, and fewer background apps.

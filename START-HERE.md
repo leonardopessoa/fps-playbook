@@ -84,6 +84,32 @@ Run the same test as Part 1, the same way, and tell the AI your new numbers. Ask
 
 **It's fine to stop whenever you're happy.** If your FPS is already above your monitor's refresh rate and the game feels smooth, you may not need anything else.
 
+## Extra: the CS2 video settings from our example
+
+These are the settings from the example PC in the [README](README.md). They're based on what pros commonly use, and they're safe to try because you can change them back in the menu.
+
+1. In CS2, take a phone photo of your current video settings, so you can go back.
+2. Go to **SETTINGS > Video**, then open **Advanced Video**.
+3. Change these, then run the Part 1 benchmark again:
+
+| Setting | Our value | Most common among pros |
+|---|---|---|
+| Display Mode | Fullscreen | Not in the survey |
+| Boost Player Contrast | On | On |
+| Global Shadow Quality | High | High |
+| Dynamic Shadows | All | All |
+| Model / Texture Detail | High | Low |
+| Shader Detail | Low | Low |
+| Particle Detail | Low | Low |
+| Ambient Occlusion | Disabled | Disabled |
+| High Dynamic Range | Quality | Quality |
+| Multisampling Anti-Aliasing Mode | 4x MSAA | 8x MSAA |
+| Texture Filtering Mode | Anisotropic 4X | Bilinear |
+| FidelityFX Super Resolution | Disabled | Not in the survey |
+| NVIDIA Reflex Low Latency | Enabled | Not in the survey |
+
+The pro column comes from a 2025 survey of 40 pros. Your eyes matter more than any table, so if you can't spot players easily, change it back. Keep **Dynamic Shadows on All**, because shadows can give away enemies.
+
 ## Stop signs
 
 **Stop and get help from someone who knows PCs if:**

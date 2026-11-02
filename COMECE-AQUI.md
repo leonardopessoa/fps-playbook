@@ -82,6 +82,32 @@ Faça o mesmo teste da Parte 1, do mesmo jeito. Depois, passe os novos números 
 
 **Pode parar quando estiver satisfeito.** Se o seu FPS já estiver acima da taxa de atualização do monitor e o jogo estiver fluido, talvez você não precise de mais nada.
 
+## Extra: as configurações de vídeo do CS2 do nosso exemplo
+
+Estas são as configurações do PC de exemplo do [README](README.md). Elas se baseiam no que os profissionais costumam usar, e é seguro testar porque dá para voltar atrás pelo menu.
+
+1. No CS2, tire uma foto com o celular das suas configurações de vídeo atuais, para poder voltar depois.
+2. Vá em **CONFIGURAÇÕES > Vídeo** e abra **Avançado**.
+3. Mude estas opções e rode de novo o benchmark da Parte 1:
+
+| Configuração | Nosso valor | Mais comum entre profissionais |
+|---|---|---|
+| Modo de exibição | Tela cheia | Fora da pesquisa |
+| Aumentar contraste dos jogadores | Ligado | Ligado |
+| Qualidade global das sombras | Alta | Alta |
+| Sombras dinâmicas | Todas | Todas |
+| Detalhe dos modelos e texturas | Alto | Baixo |
+| Detalhe dos sombreadores | Baixo | Baixo |
+| Detalhe das partículas | Baixo | Baixo |
+| Oclusão de ambiente | Desativado | Desativado |
+| High Dynamic Range | Qualidade | Qualidade |
+| Antisserrilhado de múltiplas amostras | MSAA 4x | MSAA 8x |
+| Modo de filtragem das texturas | Anisotrópico 4X | Bilinear |
+| FidelityFX Super Resolution | Desativado | Fora da pesquisa |
+| Modo de baixa latência (NVIDIA Reflex) | Ativado | Fora da pesquisa |
+
+A coluna dos profissionais vem de uma pesquisa de 2025 com 40 jogadores. O que você enxerga vale mais do que qualquer tabela, então, se ficar difícil ver os jogadores, volte a opção. Deixe **Sombras dinâmicas em Todas**, porque as sombras podem entregar os inimigos.
+
 ## Sinais de alerta
 
 **Pare e peça ajuda a alguém que entenda de PC se:**
