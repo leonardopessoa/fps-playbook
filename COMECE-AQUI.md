@@ -44,12 +44,12 @@ Quando a IA perguntar seu FPS, passe esses números.
 
 ## Parte 2: Crie o relatório sobre o seu PC
 
-1. No topo da página deste repositório no GitHub, clique no botão verde **Code** e depois em **Download ZIP**.
+1. [Clique aqui para baixar o ZIP](https://github.com/leonardopessoa/fps-playbook/archive/refs/heads/main.zip). Se preferir, abra a [página do repositório](https://github.com/leonardopessoa/fps-playbook), clique no botão verde **Code** e depois em **Download ZIP**.
 2. Abra a pasta **Downloads**, clique com o botão direito no arquivo ZIP e escolha **Extrair Tudo** e depois **Extrair**.
-3. Abra a nova pasta. Você deve ver arquivos chamados `audit.ps1` e `PLAYBOOK.md`. Se aparecer só outra pasta, abra essa pasta.
+3. Abra a nova pasta. Você deve ver arquivos chamados [`audit.ps1`](audit.ps1) e [`PLAYBOOK.md`](PLAYBOOK.md). Se aparecer só outra pasta, abra essa pasta.
 4. Clique com o botão direito em um espaço vazio da pasta e escolha **Abrir no Terminal**. Vai aparecer uma janela com texto. Isso é normal.
    - Não apareceu? Clique em **Mostrar mais opções** e procure **Abrir janela do PowerShell aqui**.
-5. Copie a linha inteira abaixo, cole nessa janela clicando com o botão direito e aperte **Enter**:
+5. Quer ver o que o script faz antes de rodar? [Abra o `audit.ps1` aqui](audit.ps1). Depois, copie a linha inteira abaixo, cole nessa janela clicando com o botão direito e aperte **Enter**:
 
    ```powershell
    powershell -NoProfile -ExecutionPolicy Bypass -File .\audit.ps1 -OutFile audit.txt
@@ -63,7 +63,7 @@ Texto de erro em vermelho em uma ou duas seções geralmente não é problema. C
 ## Parte 3: Peça ajuda à IA
 
 1. Abra um chat de IA gratuito no navegador, como [Claude](https://claude.ai), [ChatGPT](https://chatgpt.com) ou [Gemini](https://gemini.google.com). Talvez seja preciso criar uma conta grátis.
-2. Anexe `PLAYBOOK.md` e `audit.txt`. Procure um botão de clipe ou **+** perto da caixa de mensagem. Se não houver, abra cada arquivo, copie todo o texto e cole no chat. O `PLAYBOOK.md` está em inglês, mas a IA entende.
+2. Anexe o `PLAYBOOK.md` (está na pasta que você extraiu) e o `audit.txt` (o arquivo que você criou na Parte 2). Procure um botão de clipe ou **+** perto da caixa de mensagem. Se não houver, copie e cole o texto: para o `PLAYBOOK.md`, [abra o texto puro aqui](https://raw.githubusercontent.com/leonardopessoa/fps-playbook/main/PLAYBOOK.md), aperte **Ctrl+A** e **Ctrl+C** e cole no chat. Para o `audit.txt`, abra o arquivo e faça o mesmo. O `PLAYBOOK.md` está em inglês, mas a IA entende.
 3. Copie a mensagem abaixo, preencha os colchetes e envie:
 
    > Sou totalmente iniciante. Use o PLAYBOOK.md em anexo para descobrir por que meu jogo poderia rodar mais rápido, usando o meu audit.txt em anexo. Responda em português do Brasil.

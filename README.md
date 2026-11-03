@@ -12,21 +12,21 @@ This repo holds a set of instructions your AI can follow, and a read-only script
 
 ### With an AI that can run commands on your PC
 
-Examples include Claude Code, Codex and similar tools. Download this repo, open your AI in the folder, and paste:
+Examples include Claude Code, Codex and similar tools. [Download this repo as a ZIP](https://github.com/leonardopessoa/fps-playbook/archive/refs/heads/main.zip), extract it, open your AI in the folder, and paste:
 
 > Read PLAYBOOK.md and follow it to find where my PC is leaving FPS on the table in [your game]. Don't change anything without my explicit approval.
 
 ### With a chat-only AI
 
-1. Read `audit.ps1`, so you know what it does.
-2. Open PowerShell in this folder and run:
+1. Read [`audit.ps1`](audit.ps1), so you know what it does.
+2. [Download this repo as a ZIP](https://github.com/leonardopessoa/fps-playbook/archive/refs/heads/main.zip) and extract it. Open PowerShell in that folder and run:
 
    ```powershell
    powershell -NoProfile -ExecutionPolicy Bypass -File .\audit.ps1 -OutFile audit.txt
    ```
 
 3. Read `audit.txt`, and remove anything you don't want to share.
-4. Paste `PLAYBOOK.md` and `audit.txt` into the chat, and name your game and any competitive platforms you use.
+4. Paste [`PLAYBOOK.md`](https://raw.githubusercontent.com/leonardopessoa/fps-playbook/main/PLAYBOOK.md) and `audit.txt` into the chat, and name your game and any competitive platforms you use.
 
 ## Example result
 
@@ -44,7 +44,7 @@ The exact CS2 video settings used are in [START-HERE.md](START-HERE.md), [COMECE
 - The 380 is the owner's recollection, not a controlled before-and-after run, and it may have been limited by a 400 FPS cap.
 - The changes were made together, so we can't say which one helped most: BIOS update, RAM from 3200 to 3600, lower CS2 settings, and fewer background apps.
 - The benchmark is the [CS2 FPS BENCHMARK DUST2 Workshop map](https://steamcommunity.com/workshop/filedetails/?id=3240880604), not a real match. It's the recommended way to compare your own CS2 results over time. Its author says results don't carry over to real matches, because the client also simulates the whole game.
-- Tighter RAM timings made no measurable difference, and CAS 16 wouldn't boot on this kit. The details are in `PLAYBOOK.md`.
+- Tighter RAM timings made no measurable difference, and CAS 16 wouldn't boot on this kit. The details are in [`PLAYBOOK.md`](PLAYBOOK.md).
 - The final RAM settings passed 2 MemTest86 passes, but **a full four-pass test had not been confirmed at the time of writing**.
 - This is one PC. Yours may gain more, less or nothing. If your RAM is already tuned and your settings are already low, there may be little left to gain.
 
@@ -52,10 +52,10 @@ The exact CS2 video settings used are in [START-HERE.md](START-HERE.md), [COMECE
 
 | File | Purpose |
 |---|---|
-| `START-HERE.md` | Plain-English guide for complete beginners |
-| `COMECE-AQUI.md` | The same beginner guide in Brazilian Portuguese |
-| `PLAYBOOK.md` | Step-by-step instructions for the AI, including safety rules and mistakes to avoid |
-| `audit.ps1` | Read-only PC snapshot. Needs no admin rights, changes nothing, and sends nothing anywhere |
+| [`START-HERE.md`](START-HERE.md) | Plain-English guide for complete beginners |
+| [`COMECE-AQUI.md`](COMECE-AQUI.md) | The same beginner guide in Brazilian Portuguese |
+| [`PLAYBOOK.md`](PLAYBOOK.md) | Step-by-step instructions for the AI, including safety rules and mistakes to avoid |
+| [`audit.ps1`](audit.ps1) | Read-only PC snapshot. Needs no admin rights, changes nothing, and sends nothing anywhere |
 
 The script tries to hide your Windows account name, PC name and Steam ID. Board and part names remain, so check the output before sharing it.
 
@@ -79,4 +79,4 @@ The script tries to hide your Windows account name, PC name and Steam ID. Board 
 
 ## License
 
-MIT. See `LICENSE`.
+MIT. See [`LICENSE`](LICENSE).

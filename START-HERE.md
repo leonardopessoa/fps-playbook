@@ -46,12 +46,12 @@ When the AI asks for your FPS, give it these numbers.
 
 ## Part 2: Create the report about your PC
 
-1. At the top of this repo's page on GitHub, click the green **Code** button, then **Download ZIP**.
+1. [Click here to download the ZIP](https://github.com/leonardopessoa/fps-playbook/archive/refs/heads/main.zip). Or open the [repo's page](https://github.com/leonardopessoa/fps-playbook), click the green **Code** button, then **Download ZIP**.
 2. Open your **Downloads** folder, right-click the ZIP, and choose **Extract All**, then **Extract**.
-3. Open the new folder. You should see files named `audit.ps1` and `PLAYBOOK.md`. If you only see another folder, open that one.
+3. Open the new folder. You should see files named [`audit.ps1`](audit.ps1) and [`PLAYBOOK.md`](PLAYBOOK.md). If you only see another folder, open that one.
 4. Right-click an empty spot in the folder, and choose **Open in Terminal**. A window with text appears. That's normal.
    - Don't see it? Click **Show more options** and look for **Open PowerShell window here**.
-5. Copy this whole line, paste it into that window with a right-click, and press **Enter**:
+5. Want to see what the script does before you run it? [Open `audit.ps1` here](audit.ps1). Then copy this whole line, paste it into that window with a right-click, and press **Enter**:
 
    ```powershell
    powershell -NoProfile -ExecutionPolicy Bypass -File .\audit.ps1 -OutFile audit.txt
@@ -65,7 +65,7 @@ Red error text in a section or two is usually fine. Continue anyway, and show it
 ## Part 3: Ask the AI
 
 1. Open a free AI chat in your browser, such as [Claude](https://claude.ai), [ChatGPT](https://chatgpt.com) or [Gemini](https://gemini.google.com). You may need to make a free account.
-2. Attach `PLAYBOOK.md` and `audit.txt`. Look for a paperclip or **+** button near the message box. If there isn't one, open each file, copy all its text, and paste it in.
+2. Attach `PLAYBOOK.md` (it's in the folder you extracted) and `audit.txt` (the file you made in Part 2). Look for a paperclip or **+** button near the message box. If there isn't one, paste the text instead: for `PLAYBOOK.md`, [open the plain text here](https://raw.githubusercontent.com/leonardopessoa/fps-playbook/main/PLAYBOOK.md), press **Ctrl+A** and **Ctrl+C**, and paste it in. For `audit.txt`, open the file and do the same.
 3. Copy the message below, fill in the brackets, and send it:
 
    > I'm a complete beginner. Use the attached PLAYBOOK.md to find why my game could run faster, using my attached audit.txt.
